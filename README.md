@@ -33,13 +33,13 @@ LJSpeech : https://keithito.com/LJ-Speech-Dataset/
 
 #### 2. Preprocessing (Preparing Mel Spectrogram)
 
-`python preprocessing.py --in_dir LJSpeech-1.1 --out_dir DATASETS/ljspeech`
+`python preprocessing.py --in_dir=LJSpeech-1.1 --out_dir=DATASETS/ljspeech`
 
-#### 3. Train
+#### 3. Training
 
-`python train.py  --batch_size=20 --n_block=4 --split_period=2 --scale_init=4 --n_layer_wvn=4 --n_channel_wvn=128 --d_i=3`
+`python train.py  --batch_size=20 --n_block=4 --split_period=2 --scale_init=4 --n_layer_wvn=4 --n_channel_wvn=128 --d_i=3 --log_interval=50 --synth_interval=250`
 
-#### 4. Synthesize
+#### 4. Audio Sample Generation
 
 `python synthesize.py --load_step=27140 --tol_synth=1e-3 --num_synth=10 --batch_size=20 --n_block=4 --scale_init=4 --split_period=2 --n_layer_wvn=4 --n_channel_wvn=128 --d_i=3`
 

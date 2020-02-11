@@ -92,11 +92,13 @@ def write_metadata(metadata, out_dir):
 
 
 if __name__ == "__main__":
+    print('<--- Preprocessing start --->')
     parser = argparse.ArgumentParser(description='Preprocessing',
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument('--in_dir', '-i', type=str, default='./', help='In Directory')
-    parser.add_argument('--out_dir', '-o', type=str, default='./', help='Out Directory')
+    parser.add_argument('--in_dir', '-i', type=str, default='LJSpeech-1.1', help='In Directory')
+    parser.add_argument('--out_dir', '-o', type=str, default='DATASETS/ljspeech', help='Out Directory')
     args = parser.parse_args()
 
     num_workers = cpu_count()
     preprocess(args.in_dir, args.out_dir, num_workers)
+    print('<--- Preprocessing done --->')
