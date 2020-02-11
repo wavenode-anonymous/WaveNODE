@@ -1,8 +1,8 @@
-## WaveNODE : A Continuous Normalizing Flow for Speech Synthesis
+# Pytorch Implementation of WaveNODE
 
 We provide a PyTorch implementation of WaveNODE
 
-### Abstract
+## Abstract
 In recent years, various flow-based generative
 models have been proposed to generate highfidelity waveforms in real-time. However, these
 models require either a well-trained teacher network or a number of flow steps making them
@@ -18,14 +18,14 @@ show that WaveNODE achieves comparable performance in terms of mean opinion scor
 and conditional log-likelihood (CLL) with fewer
 parameters compared to the existing models.
 
-### Requirements
+## Requirements
 
 - PyTorch 1.3.1
 - Python 3.7.3
 - Librosa
 - torchdiffeq : https://github.com/rtqichen/torchdiffeq
 
-### Examples
+## Examples
 
 #### 1. Download Dataset
 
@@ -51,11 +51,11 @@ LJSpeech : https://keithito.com/LJ-Speech-Dataset/
 
 `python test_speed.py --load_step=27140 --batch_size=20 --n_block=4 --scale_init=4 --split_period=2 --n_layer_wvn=4 --n_channel_wvn=128 --d_i=3`
 
-### Audio Samples
+## Audio Samples
 
 Audio examples : https://wavenode-anonymous.github.io/
 
-### Reference
+## Reference
 
 - FFJORD : https://github.com/rtqichen/ffjord
 - WaveGlow : https://github.com/NVIDIA/waveglow
